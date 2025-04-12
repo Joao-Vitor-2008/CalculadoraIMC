@@ -6,9 +6,11 @@ public class Exec {
 
 	public static void main(String[] args) {
 		String peso = JOptionPane.showInputDialog(null, "Informe seu peso");
-		String altura = JOptionPane.showInputDialog(null, "Informe sua altura");
+		String alturaCm = JOptionPane.showInputDialog(null, "Informe sua altura em centímetros");
 		
-		float imc = Float.valueOf(peso) / (Float.valueOf(altura) * Float.valueOf(altura));
+		float alturaM = Float.valueOf(alturaCm) / 100;
+		
+		float imc = Float.valueOf(peso) / (Float.valueOf(alturaM) * Float.valueOf(alturaM));
 		
 		if (imc < 18.5) {
 			JOptionPane.showMessageDialog(null, "Abaixo do normal\nIMC : " + imc);
